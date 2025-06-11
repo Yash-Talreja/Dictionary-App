@@ -1,5 +1,6 @@
 package com.example.dictionary.ui.theme.Ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,11 +11,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.dictionary.ui.theme.DictionaryViewModel.DictionaryState
 import com.example.dictionary.ui.theme.DictionaryViewModel.DictionaryViewModel
+import com.example.dictionary.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,6 +53,11 @@ fun DictionaryScreen(viewModel: DictionaryViewModel) {
                 ),
                 modifier = Modifier.padding(bottom = 24.dp)
             )
+
+            Image(painter = painterResource(id = R.drawable.img),contentDescription = "image"
+                ,modifier = Modifier.size(150.dp),Alignment.Center)
+
+            Spacer(modifier = Modifier.height(22.dp))
 
             TextField(
                 value = query,
